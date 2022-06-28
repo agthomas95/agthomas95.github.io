@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<plantbase>
+  <plant id="aloe vera">
+    <name>aloe vera</name>
+    <water>yes</water>
+    <sunlight>indirect, artificial</sunlight>
+  </plant>
+  <plant id="money tree">
+    <name>money tree</name>
+    <water>yes</water>
+    <sunlight>direct, indirect</sunlight>
+  </plant>
+  <plant id="succulent">
+    <name>succulent</name>
+    <water>yes</water>
+    <sunlight>indirect</sunlight>
+  </plant>
+</plantbase>
