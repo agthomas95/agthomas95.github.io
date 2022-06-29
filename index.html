@@ -40,7 +40,7 @@
   function plantFunction(xml, request) {
     try {
       if (request == "hymp") {
-        plantList = xml.getElementsByTagName("plant");
+        plantList = xml.responseXML.getElementsByTagName("plant");
         var rand = Math.random() * plantList.length;
 
         document.getElementById("plantInfo").innerHTML =
