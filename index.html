@@ -18,12 +18,12 @@
     <input type="text" placeholder="Search up!" >
   </form>
 
-  <p id="plantInfo"></p>
+  <div id="plantInfo"></div>
 
   <script>
-  plantFunction("plant_database.xml", "hymp");
+  loadXMLFile("plant_database.xml", "hymp");
 
-  function loadXMLFile(request) {
+  function loadXMLFile(xml, request) {
     try {
       var plantDB = new XMLHttpRequest();
       plantDB.onreadystatechange = function() {
@@ -31,7 +31,7 @@
           plantFunction(this, request);
         }
       };
-      plantDB.open("GET", "plant_database.xml", true);
+      plantDB.open("GET", xml, true);
       plantDB.send();
     }
     catch (error) {document.getElementById("plantInfo").innerHTML = error;}
