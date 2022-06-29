@@ -21,32 +21,23 @@
   <div id="plantInfo"></div>
 
   <script>
-  loadXMLFile("plant_database.xml", "hymp");
-
-  function loadXMLFile(xml, request) {
-    try {
-      var plantDB = new XMLHttpRequest();
-      plantDB.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          plantFunction(this, request);
-        }
-      };
-      plantDB.open("GET", xml, true);
-      plantDB.send();
-    }
-    catch (error) {document.getElementById("plantInfo").innerHTML = error;}
-  }
+  plantFunction("plant_database.xml", "hymp");
 
   function plantFunction(xml, request) {
     try {
+      var plantDB = new XMLHttpRequest();
+      plantDB.open("GET", xml, true);
+      plantDB.send();
+      plantDOC = plantDB.responseXML;
+      
       if (request == "hymp") {
-        plantList = xml.responseXML.getElementsByTagName("plant");
-        var rand = Math.random() * plantList.length;
+        plantEle = plantDOC.getElementsByTagName("plant");
+        var rand = 0;
 
         document.getElementById("plantInfo").innerHTML =
-        "Plant name: " + plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue +
-        "<br>Needs water: " + plantList[rand].getElementsByTagName("water")[0].childNodes[0].nodeValue +
-        "<br>Sunlight: " + plantList[rand].getElementsByTagName("sunlight")[0].childNodes[0].nodeValue;
+        "Plant name: " + plantEle[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+        "<br>Needs water: " + plantEle[rand].getElementsByTagName("water")[0].childNodes[0].nodeValue +
+        "<br>Sunlight: " + plantEle[rand].getElementsByTagName("sunlight")[0].childNodes[0].nodeValue;
       }
     }
     catch (error) {
