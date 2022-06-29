@@ -45,12 +45,12 @@
 
       if (request == "hymp") {
         plantList = plantDoc.getElementsByTagName("plant");
-        var rand = plantList.length;
+        var rand = Math.random() * plantList.length;
 
         document.getElementById("plantInfo").innerHTML =
-        "Plant name: " + plantList[0].getElementsByTagName("name")[0].childNodes[0].nodeValue +
-        "<br>Needs water: " + plantList[0].getElementsByTagName("water")[0].childNodes[0].nodeValue +
-        "<br>Sunlight: " + plantList[0].getElementsByTagName("sunlight")[0].childNodes[0].nodeValue;
+        "Plant name: " + plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+        "<br>Needs water: " + plantList[rand].getElementsByTagName("water")[0].childNodes[0].nodeValue +
+        "<br>Sunlight: " + plantList[rand].getElementsByTagName("sunlight")[0].childNodes[0].nodeValue;
       }
     }
     catch (error) {
