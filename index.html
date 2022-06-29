@@ -21,19 +21,28 @@
   <p id="plantInfo"></p>
 
   <script>
-  //loadXMLFile("hymp");
+  plantFunction("plant_database.xml", "hymp");
 
   function loadXMLFile(request) {
     try {
       var plantDB = new XMLHttpRequest();
+      plantDB.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          plantFunction(this, request);
+        }
+      };
+      plantDB.open("GET", "plant_database.xml", true);
     }
     catch (error) {document.getElementById("plantInfo").innerHTML = error;}
   }
 
   function plantFunction(xml, request) {
+    parser = new DOMParser();
+    plantDB = parser.parseFromString(xml, "text/xml");
+
     if (request == "hymp") {
       try {
-        plantList = xml.getElementsByTagName("plant");
+        plantList = plantDB.getElementsByTagName("plant");
         var rand = Math.random() * plantList.length;
 
         document.getElementById("plantInfo").innerHTML =
