@@ -39,7 +39,7 @@
   function plantFunction(xml, request) {
     try {
       parser = new DOMParser();
-      plantDB = parser.parseFromString(xml, "text/xml");
+      plantDB = parser.parseFromString(xml, "text/plain");
 
       if (request == "hymp") {
         plantList = plantDB.getElementsByTagName("plant");
