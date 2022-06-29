@@ -45,7 +45,7 @@
 
       if (request == "hymp") {
         plantList = plantDoc.getElementsByTagName("plant");
-        var rand = Math.random() * plantList.length;
+        var rand = Math.floor(Math.random() * plantList.length);
 
         document.getElementById("plantInfo").innerHTML =
         "Plant name: " + plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue +
