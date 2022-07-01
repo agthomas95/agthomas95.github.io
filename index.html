@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-  form.bsb input[type=text] {
-    padding: 10px;
-    font-size: 24px;
-  }
-  </style>
-  <title>How to Train Your Plants</title>
+  <link rel="stylesheet" href="plant_website_css.css">
+  <title>Test</title>
 </head>
 
 <body>
@@ -24,6 +19,7 @@
 
   <script>
   loadXMLFile("plant_database.xml", "hymp");
+  loadXMLFile("plant_database.xml", "title");
 
   function loadXMLFile(xmlFile, request) {
     try {
@@ -44,15 +40,22 @@
       var plantDB = xml.responseText;
       var parser = new DOMParser();
       var plantDoc = parser.parseFromString(plantDB, "text/xml");
+      var rand;
 
       if (request == "hymp") {
         plantList = plantDoc.getElementsByTagName("plant");
-        var rand = Math.floor(Math.random() * plantList.length);
+        rand = Math.floor(Math.random() * plantList.length);
 
         document.getElementById("plantInfo").innerHTML =
         "Plant name: " + plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue +
         "<br>Needs water: " + plantList[rand].getElementsByTagName("water")[0].childNodes[0].nodeValue +
         "<br>Sunlight: " + plantList[rand].getElementsByTagName("sunlight")[0].childNodes[0].nodeValue;
+      }
+
+      if(request == "title") {
+        plantList = plantDoc.getElementsByTagName("planttitles").getElementsByTagName("title");
+        rand = Math.floor(Math.random() * plantList.length);
+        document.title = plantList[rand].childNodes[0].nodeValue;
       }
     }
     catch (error) {
