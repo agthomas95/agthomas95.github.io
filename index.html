@@ -15,6 +15,7 @@
   </div>
 
   <div id="plantInfo"></div>
+  <div id="error"></div>
 
   <script>
   loadXMLFile("plant_database.xml", "hymp");
@@ -31,7 +32,7 @@
       getDB.open("GET", xmlFile, true);
       getDB.send();
     }
-    catch (error) {document.getElementById("plantInfo").innerHTML = error;}
+    catch (error) {document.getElementById("error").innerHTML = error;}
   }
 
   function plantFunction(xml, request) {
@@ -52,13 +53,13 @@
       }
 
       if(request == "title") {
-        plantTitleList = plantDoc.getElementsByTagName("planttitles").getElementsByTagName("title");
+        plantTitleList = plantDoc.getElementsByTagName("planttitles")[0].getElementsByTagName("title");
         rand = Math.floor(Math.random() * plantTitleList.length);
         document.title = plantTitleList[rand].childNodes[0].nodeValue;
       }
     }
     catch (error) {
-      document.getElementById("plantInfo").innerHTML = error;
+      document.getElementById("error").innerHTML = error;
     }
   }
 
