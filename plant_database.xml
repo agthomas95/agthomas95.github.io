@@ -15,4 +15,12 @@
     <water>yes</water>
     <sunlight>indirect</sunlight>
   </plant>
+
+  <planttitles>
+    <title>How to Train Your Plants</title>
+    <title>How I Met Your Plant</title>
+    <title>Charlie and the Plant Factory</title>
+    <title>The Plants</title>
+    <title>Fantastic Plants and Where to Find Them</title>
+  </planttitles>
 </plantbase>
