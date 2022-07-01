@@ -2,6 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="plant_website_css.css">
+  <title>Plant Title</title>
 </head>
 
 <body>
@@ -54,7 +55,7 @@
       if(request == "title") {
         plantList = plantDoc.getElementsByTagName("planttitles");
         rand = Math.floor(Math.random() * plantList.length);
-        document.title = plantList.getElementsByTagName("title")[rand].childNodes[0].nodeValue;
+        document.title = plantList[0].getElementsByTagName("title")[rand].childNodes[0].nodeValue;
       }
     }
     catch (error) {
