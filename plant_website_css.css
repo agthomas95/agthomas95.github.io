@@ -5,8 +5,73 @@
   width: 30px;
 }
 
+/* top bar containing a circle, title of the website, a quiz button, and a
+button for a burger menu */
 .search_bar {
   height: 30px;
   width: 180px;
   font-size: 18px;
+}
+
+.title_box {
+  display: flex;
+  height: 10%;
+  font-size: 36px;
+  flex-direction: row;
+  border-bottom: 1px solid black;
+}
+
+#title_circle_box {
+  padding-left: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 5%;
+}
+
+#title_circle {
+  height: 40px;
+  width: 40px;
+  background-color: #bbb;
+  border-radius: 50%;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+
+#inner_title_box {
+  padding-left: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 65%;
+}
+
+#quiz_button_box {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 20%;
+}
+
+#quiz_button {
+  height: 75%;
+  width: 25%;
+  border: none;
+  background-color: lightgrey;
+  font-size: 24px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+#quiz_button:hover {background-color: grey;}
+
+#hamburger_button_box {
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+
+/* How I Met Your Plant section */
+.hymp_box {
+  display: inline;
 }
