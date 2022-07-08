@@ -1,3 +1,8 @@
+body {
+  font-family: 'Montserrat';
+  height: 100%;
+}
+
 .button_search {
   background-image: url("https://www.nicepng.com/png/detail/104-1044901_magnifying-glass-magnifying-glass-drawing-png.png");
   background-size: 30px 30px;
@@ -19,42 +24,43 @@ button for a burger menu */
   font-size: 36px;
   flex-direction: row;
   border-bottom: 1px solid black;
+  align-items: center;
+  color: #254117;
 }
 
-#title_circle_box {
-  padding-left: 10px;
+#title_logo_box {
   justify-content: center;
-  align-items: center;
+  text-align: center;
   width: 5%;
+  padding-left: 10px;
 }
 
-#title_circle {
-  height: 40px;
-  width: 40px;
-  background-color: #bbb;
-  border-radius: 50%;
-  justify-content: flex-end;
-  align-items: center;
+#title_logo {
+  width: 50px;
+  height: 50px;
+  background-image: url(plant_website_logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  justify-content: center;
   text-align: center;
 }
 
 #inner_title_box {
-  padding-left: 10px;
-  justify-content: flex-start;
-  align-items: center;
+  text-align: left;
+  flex-wrap: wrap;
+  margin: 0 auto;
   width: 65%;
 }
 
 #quiz_button_box {
   justify-content: center;
-  align-items: center;
   text-align: center;
   width: 20%;
 }
 
 #quiz_button {
-  height: 75%;
-  width: 25%;
+  height: 35px;
+  width: 70px;
   border: none;
   background-color: lightgrey;
   font-size: 24px;
@@ -67,11 +73,10 @@ button for a burger menu */
 
 #hamburger_button_box {
   justify-content: center;
-  align-items: center;
   width: 10%;
 }
 
 /* How I Met Your Plant section */
 .hymp_box {
-  display: inline;
+  height: 30%;
 }
