@@ -79,4 +79,35 @@ button for a burger menu */
 /* How I Met Your Plant section */
 .hymp_box {
   height: 30%;
+  flex-direction: row;
+}
+
+#hymp_space {
+  width: 10%
+}
+
+#hymp_text {
+  width: 50%;
+}
+
+#hymp_picture {
+  width: 40%;
+  background-image: url("https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+}
+
+/* Contains boxes of plants that can be clicked on to go to its respective
+website */
+.plant_select_box {
+  height: 45%;
+}
+
+#plant_boxes {
+  display: flex;
+  flex-direction: row;
+
+
+}
+
+.bottom_box {
+  height: 20%;
 }
