@@ -80,8 +80,8 @@
         "<br>Needs water: " + plantList[rand].getElementsByTagName("water")[0].childNodes[0].nodeValue +
         "<br>Sunlight: " + plantList[rand].getElementsByTagName("sunlight")[0].childNodes[0].nodeValue;
         */
-        document.getElementById("hympName") = plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue;
-        document.getElementById("hympPic") = plantList[rand].getElementsByTagName("image")[0].childNodes[0].nodeValue;
+        document.getElementById("hympName").innerHTML = plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+        document.getElementById("hympPic").innerHTML = plantList[rand].getElementsByTagName("image")[0].childNodes[0].nodeValue;
       }
 
       if(request == "title") {
