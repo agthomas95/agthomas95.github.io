@@ -15,11 +15,16 @@
   </div>
 
   <div class="hymp_box">
-    <div id="hymp_space"></div>
+    <div id="hymp_space">test</div>
     <div id="hymp_text">
-
+      <span style="font-size: 72px; color: #254117";>ALOE<br>THERE.<br></span>
+      <span style="font-size: 48px; color: #ACBAA9">
+        Have you met, <span id="hympName" style="color:#254117"><u></u></span>
+      </span>
     </div>
-    <div id="hymp_picture"></div>
+    <div id="hymp_picture">
+      <img id="hympPic" src="" />
+    </div>
   </div>
 
   <div class="plant_select_box">
@@ -39,7 +44,6 @@
     </form>
   </div>
 
-  <div id="plantInfo"></div>
   <div id="error"></div>
 
   <script>
@@ -70,11 +74,14 @@
       if (request == "hymp") {
         plantList = plantDoc.getElementsByTagName("plant");
         rand = Math.floor(Math.random() * plantList.length);
-
+        /*
         document.getElementById("plantInfo").innerHTML =
         "Plant name: " + plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue +
         "<br>Needs water: " + plantList[rand].getElementsByTagName("water")[0].childNodes[0].nodeValue +
         "<br>Sunlight: " + plantList[rand].getElementsByTagName("sunlight")[0].childNodes[0].nodeValue;
+        */
+        document.getElementById("hympName") = plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+        document.getElementById("hympPic") = plantList[rand].getElementsByTagName("image")[0].childNodes[0].nodeValue;
       }
 
       if(request == "title") {
@@ -82,6 +89,21 @@
         rand = Math.floor(Math.random() * plantTitleList.length);
         document.title = plantTitleList[rand].childNodes[0].nodeValue;
       }
+    }
+    catch (error) {
+      document.getElementById("error").innerHTML = error;
+    }
+  }
+
+  function createHymp(xml) {
+    try {
+      var plantDB = xml.responseText;
+      var parser = new DOMParser;
+      var plantDoc = parser.parseFromString(plantDB, "text/xml");
+
+      var hympSpace = document.createElement("div")
+      hympSpace.id = "hymp_space";
+      document.body.appendChild(hympSpace);
     }
     catch (error) {
       document.getElementById("error").innerHTML = error;
