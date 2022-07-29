@@ -23,4 +23,9 @@
     <title>The Plants</title>
     <title>Fantastic Plants and Where to Find Them</title>
   </planttitles>
+
+  <hymp>
+    <name>Eucalyptus</name>
+    <image>https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80</image>
+  </hymp>
 </plantbase>
