@@ -15,7 +15,9 @@
   </div>
 
   <div class="hymp_box">
-    <div id="hymp_space"></div>
+    <div id="hymp_space">
+      <div id="hympSpaceColor"></div>
+    </div>
     <div id="hymp_text">
       <span style="font-size: 64px; color: #254117";>ALOE<br>THERE.<br></span>
       <span style="font-size: 36px; color: #ACBAA9">
@@ -85,9 +87,9 @@
         "<br>Needs water: " + plantList[rand].getElementsByTagName("water")[0].childNodes[0].nodeValue +
         "<br>Sunlight: " + plantList[rand].getElementsByTagName("sunlight")[0].childNodes[0].nodeValue;
         */
+        document.getElementById("hympSpaceColor").style.backgroundColor = plantList[rand].getElementsByTagName("color")[0].childNodes[0].nodeValue;
         document.getElementById("hympName").innerHTML = plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue;
         document.getElementById("hympPic").innerHTML = "<img src='" + plantList[rand].getElementsByTagName("image")[0].childNodes[0].nodeValue + "'>";
-        //document.getElementById("hympPic").innerHTML = plantList[rand].getElementsByTagName("image")[0].childNodes[0].nodeValue;
       }
 
       if(request == "title") {
