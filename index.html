@@ -86,7 +86,7 @@
         "<br>Sunlight: " + plantList[rand].getElementsByTagName("sunlight")[0].childNodes[0].nodeValue;
         */
         document.getElementById("hympName").innerHTML = plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue;
-        document.getElementById("hympPic").innerHTML = "test";
+        document.getElementById("hympPic").innerHTML = "<img src='" + plantList[rand].getElementsByTagName("image")[0].childNodes[0].nodeValue + "'>";
         //document.getElementById("hympPic").innerHTML = plantList[rand].getElementsByTagName("image")[0].childNodes[0].nodeValue;
       }
 
