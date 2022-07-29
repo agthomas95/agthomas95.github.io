@@ -73,6 +73,8 @@
 
       if (request == "hymp") {
         plantList = plantDoc.getElementsByTagName("hymp");
+        console.log(plantList);
+        console.log(plantList[0]);
         if (plantList.length != 1) {
           rand = Math.floor(Math.random() * plantList.length);
         }
