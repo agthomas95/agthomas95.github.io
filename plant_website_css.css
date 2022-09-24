@@ -82,20 +82,25 @@ button for a burger menu */
   height: 30%;
   flex-direction: row;
   align-items: center;
+  font-weight: 500;
 }
 
-#hymp_space {
+#hymp_space_left {
   width: 10%;
 }
 
 #hymp_text {
-  width: 50%;
+  width: 40%;
   justify-content: flex-start;
   align-content: center;
 }
 
 #hymp_picture {
   width: 40%;
+}
+
+#hymp_space_right {
+  width: 10%;
 }
 
 /* Contains boxes of plants that can be clicked on to go to its respective
@@ -107,8 +112,6 @@ website */
 #plant_boxes {
   display: flex;
   flex-direction: row;
-
-
 }
 
 .bottom_box {
