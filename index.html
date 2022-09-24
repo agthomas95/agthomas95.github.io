@@ -63,7 +63,7 @@
       getDB.open("GET", xmlFile, true);
       getDB.send();
     }
-    catch (error) {document.getElementById("error").innerHTML = error;}
+    catch (error) {document.getElementById("error").innerHTML = error + "\nlocation: loadXMLFile";}
   }
 
   function plantFunction(xml, request) {
@@ -81,13 +81,7 @@
         else {
           rand = 0;
         }
-        /*
-        document.getElementById("plantInfo").innerHTML =
-        "Plant name: " + plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue +
-        "<br>Needs water: " + plantList[rand].getElementsByTagName("water")[0].childNodes[0].nodeValue +
-        "<br>Sunlight: " + plantList[rand].getElementsByTagName("sunlight")[0].childNodes[0].nodeValue;
-        */
-        document.getElementById("hympSpaceColor").attributes["style"].textContent = "background-color: #F6F6F8";
+        //document.getElementById("hympSpaceColor").attributes["style"].textContent = "background-color:" + plantList[rand].getElementsByTagName("color")[0].childNodes[0].nodeValue;
         document.getElementById("hympName").innerHTML = plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue;
         document.getElementById("hympPic").innerHTML = "<img src='" + plantList[rand].getElementsByTagName("image")[0].childNodes[0].nodeValue + "'>";
       }
@@ -99,7 +93,7 @@
       }
     }
     catch (error) {
-      document.getElementById("error").innerHTML = error;
+      document.getElementById("error").innerHTML = error + "\nlocation: plantFunction";
     }
   }
 
@@ -114,7 +108,7 @@
       document.body.appendChild(hympSpace);
     }
     catch (error) {
-      document.getElementById("error").innerHTML = error;
+      document.getElementById("error").innerHTML = error + "\nlocation: createHymp";
     }
   }
 
