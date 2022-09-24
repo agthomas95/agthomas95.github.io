@@ -81,7 +81,7 @@
         else {
           rand = 0;
         }
-        //document.getElementById("hympSpaceColor").attributes["style"].textContent = "background-color:" + plantList[rand].getElementsByTagName("color")[0].childNodes[0].nodeValue;
+        document.getElementById("hympSpaceColor").style.backgroundColor = plantList[rand].getElementsByTagName("color")[0].childNodes[0].nodeValue;
         document.getElementById("hympName").innerHTML = plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue;
         document.getElementById("hympPic").innerHTML = "<img src='" + plantList[rand].getElementsByTagName("image")[0].childNodes[0].nodeValue + "'>";
       }
