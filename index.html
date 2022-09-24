@@ -15,9 +15,7 @@
   </div>
 
   <div class="hymp_box">
-    <div id="hymp_space_left">
-      <div id="hympSpaceColor"></div>
-    </div>
+    <div id="hymp_space_left"></div>
     <div id="hymp_text">
       <span style="font-size: 64px; color: #254117";>ALOE<br>THERE.<br></span>
       <span style="font-size: 36px; color: #ACBAA9">
@@ -27,8 +25,7 @@
     <div id="hymp_picture">
       <div id="hympPic"></div>
     </div>
-    <div id="hymp_space_right">
-      <div id="hympSpaceColor"></div>
+    <div id="hymp_space_right"></div>
   </div>
 
   <div class="plant_select_box">
@@ -83,8 +80,9 @@
         else {
           rand = 0;
         }
-        document.getElementById("hympSpaceColor").style.backgroundColor = plantList[rand].getElementsByTagName("color")[0].childNodes[0].nodeValue;
-        document.getElementById("hympName").style.backgroundColor = plantList[rand].getElementsByTagName("color")[0].childNodes[0].nodeValue;
+        document.getElementById("hymp_space_left").style.backgroundColor = plantList[rand].getElementsByTagName("color")[0].childNodes[0].nodeValue;
+        document.getElementById("hymp_space_right").style.backgroundColor = plantList[rand].getElementsByTagName("color")[0].childNodes[0].nodeValue;
+        document.getElementById("hymp_text").style.backgroundColor = plantList[rand].getElementsByTagName("color")[0].childNodes[0].nodeValue;
         document.getElementById("hympName").innerHTML = plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue;
         document.getElementById("hympPic").innerHTML = "<img src='" + plantList[rand].getElementsByTagName("image")[0].childNodes[0].nodeValue + "'>";
       }
