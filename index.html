@@ -14,7 +14,7 @@
     <div id="hamburger_button_box">|||</div>
   </div>
 
-  <div class="hymp_box">
+  <div class="hymp_box" id="hymp_color">
     <div id="hymp_space_left"></div>
     <div id="hymp_text">
       <span style="font-size: 64px; color: #254117";>ALOE<br>THERE.<br></span>
@@ -80,7 +80,7 @@
         else {
           rand = 0;
         }
-        document.getElementById("hymp_box").style.backgroundColor = plantList[rand].getElementsByTagName("color")[0].childNodes[0].nodeValue;
+        document.getElementById("hymp_color").style.backgroundColor = plantList[rand].getElementsByTagName("color")[0].childNodes[0].nodeValue;
         document.getElementById("hympName").innerHTML = plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue;
         document.getElementById("hympPic").innerHTML = "<img src='" + plantList[rand].getElementsByTagName("image")[0].childNodes[0].nodeValue + "'>";
       }
