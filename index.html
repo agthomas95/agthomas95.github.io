@@ -34,7 +34,7 @@
     </div>
   </div>
 
-  <div class="bottom_box">
+  <div class="bottom_box" id="test">
 
   </div>
 
@@ -50,6 +50,7 @@
   <script>
   loadXMLFile("plant_database.xml", "hymp");
   loadXMLFile("plant_database.xml", "title");
+  createSearchBar();
 
   function loadXMLFile(xmlFile, request) {
     try {
@@ -110,6 +111,10 @@
     catch (error) {
       document.getElementById("error").innerHTML = error + "\nlocation: createHymp";
     }
+  }
+    
+  function createSearchBar() {
+    document.getElementById("test").innerHTML = screen.width;
   }
 
   </script>
