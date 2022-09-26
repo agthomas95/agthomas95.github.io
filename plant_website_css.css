@@ -12,12 +12,6 @@ body {
 
 /* top bar containing a circle, title of the website, a quiz button, and a
 button for a burger menu */
-.search_bar {
-  height: 30px;
-  width: 180px;
-  font-size: 18px;
-}
-
 .title_box {
   display: flex;
   height: 10%;
@@ -85,6 +79,7 @@ button for a burger menu */
   font-weight: 500;
 }
 
+/* left padding for hymp_box */
 #hymp_space_left {
   width: 10%;
 }
@@ -99,8 +94,15 @@ button for a burger menu */
   width: 40%;
 }
 
+/* right padding for hymp_box */
 #hymp_space_right {
   width: 10%;
+}
+
+.search_bar {
+  height: 30px;
+  width: 180px;
+  font-size: 18px;
 }
 
 /* Contains boxes of plants that can be clicked on to go to its respective
