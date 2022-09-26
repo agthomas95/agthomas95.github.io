@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <div class="title_box">
+  <div class="title_box" id="title_box_color">
     <div id="title_logo_box"><div id="title_logo"></div></div>
     <div id="inner_title_box">How I Met Your Plant</div>
     <div id="quiz_button_box"><button id="quiz_button">Quiz</button></div>
@@ -80,6 +80,7 @@
         else {
           rand = 0;
         }
+        document.getElementById("title_box_color").style.backgroundColor = plantList[rand].getElementsByTagName("color")[0].childNodes[0].nodeValue;
         document.getElementById("hymp_color").style.backgroundColor = plantList[rand].getElementsByTagName("color")[0].childNodes[0].nodeValue;
         document.getElementById("hympName").innerHTML = plantList[rand].getElementsByTagName("name")[0].childNodes[0].nodeValue;
         document.getElementById("hympPic").innerHTML = "<img src='" + plantList[rand].getElementsByTagName("image")[0].childNodes[0].nodeValue + "'>";
